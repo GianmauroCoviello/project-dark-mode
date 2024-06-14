@@ -1,105 +1,52 @@
 import React, {useState} from "react";
+import EuropeoHeader from "./EuropeoHeader";
+import ItemGestionComponent from "./ItemGestionComponent";
 
-const card = [
-  {
-    title: 'Magnam Facilis Autem',
-    descript: 'quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto'
-  },
-  {
-    title: 'Magnam Facilis Autem',
-    descript: 'quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto'
-  },
-  {
-    title: 'Magnam Facilis Autem',
-    descript: 'quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto'
-  },
-  {
-    title: 'Magnam Facilis Autem',
-    descript: 'quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto'
-  },
-  {
-    title: 'Magnam Facilis Autem',
-    descript: 'quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto'
-  },
-  {
-    title: 'Magnam Facilis Autem',
-    descript: 'quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto'
-  },
+// const card = [
+//   {
+//     id: 0,
+//     title: 'Ordine Pinnetti',
+//     descript: '3x Capri, 2x Marghe',
+//     via: 'Via Roma 5',
+
+//     map: <div className="pb-5"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.0806514357123!2d15.788634583276304!3d41.04536534327203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13384cb96e279957%3A0x2aca40fc67e21c41!2sEuropeo!5e0!3m2!1sit!2sit!4v1717754439061!5m2!1sit!2sit" width="450" height="450" style={{border:0, borderRadius:'50%'}}  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>,
+//     price:15
+//   },
+//   {
+//     id: 1,
+//     title: 'Ordine Pinnetti',
+//     descript: '3x Capri, 2x Marghe',
+//     via: 'Via Roma 5',
+//     map: <div className="pb-5"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.0806514357123!2d15.788634583276304!3d41.04536534327203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13384cb96e279957%3A0x2aca40fc67e21c41!2sEuropeo!5e0!3m2!1sit!2sit!4v1717754439061!5m2!1sit!2sit" width="100%" height='444px' style={{border:0, borderRadius:'50%'}}  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>,
+//     price: 32
+
+//   },
+//   {
+//     id: 2,
+//     title: 'Ordine Pinnetti',
+//     descript: '3x Capri, 2x Marghe',
+//     via: 'Via Roma 5',
+//     map: <div className="pb-5"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.0806514357123!2d15.788634583276304!3d41.04536534327203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13384cb96e279957%3A0x2aca40fc67e21c41!2sEuropeo!5e0!3m2!1sit!2sit!4v1717754439061!5m2!1sit!2sit" width="450" height="450" style={{border:0, borderRadius:'50%'}}  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>,
+//     price: 38
+//   },
+  
     
-]
-console.log(card)
-
-
+// 
 function App() {
 
-  let [title, descript] = card
-
-  let [toggle, setToggle] = useState()
-
+ 
   return (
-    <div className={toggle ? ('bg-dark trans') : ('trans')}>
-      
-      <div className="container  text-center">
-        <button onClick={()=>setToggle(!toggle)} className="btn btn-primary mt-5">DARK MODE</button>
-        <div className="row d-flex justify-content-center">
-            <>
-              { 
-                card.map((el)=>{
-                  let [title, descript] = card
-                  let style = 'm-5 p-5  shadow'
-                  return (
-                    <div className="col-12 col-sm-12 col-lg-6">
-                      <div className={`m-5 p-5  shadow ${toggle ? ('text-light opa') : ('')}` } >
-                        <h3>{el.title}</h3>
-                        <p>{el.descript}</p>
-                      </div>
-                      
-                    </div>
-                  )
-                
-                })
-              }
-            
-            </>
-            
 
-        </div>
-       
-
-      </div>
-      
-      
+    <div className="pb-5">
+      <EuropeoHeader/>
+      <ItemGestionComponent></ItemGestionComponent>
     </div>
+    
   );
 }
 
 
-function Cards() {
- 
-  return(
-    <>
-      { 
-        card.map((el)=>{
-           let [title, descript] = card
-          return (
-            <div className="col-6">
-              <div className="m-5 p-5  shadow">
-                <h3>{el.title}</h3>
-                <p>{el.descript}</p>
-              </div>
-              
-            </div>
-          )
-        
-        })
-      }
-    
-    </>
-   
-  ) 
- 
-  
-}
+
 
 
 

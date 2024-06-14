@@ -6,6 +6,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.gwendolyn-regular {
+  font-family: "Gwendolyn", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gwendolyn-bold {
+  font-family: "Gwendolyn", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -18,4 +29,23 @@ code {
 .trans{
   transition: 2s;
 }
+.no-dec{
+  text-decoration: none;
 
+}
+.border-form{
+  border: 3px solid #E00605;
+  border-radius: 20px;
+
+}
+.european-blu{
+  color: #2A36A4;
+  
+}
+.european-background-blue{
+  background-color: #2A36A4;
+  color: white;
+  padding: 5px 20px 5px 20px;
+  border-radius: 10px;
+  border: none;
+}
